@@ -1,9 +1,9 @@
 import './App.css';
-import Desktop from './components/Desktop'
+import Subscribe from './components/Subscribe'
 
 function App() {
   return (
-    <Desktop></Desktop>
+    <Subscribe></Subscribe>
   );
 }
 
