@@ -17,12 +17,13 @@ const Subscribe = () => {
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
-    const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const regEx =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (regEx.test(email)) {
       setError("Success");
     } else if (!regEx.test(email)) {
       setError("Invalid email");
-    } 
+    }
   };
 
   return (
@@ -64,9 +65,12 @@ const Subscribe = () => {
             </div>
           </div>
           <form onSubmit={handleSubmitClick}>
-            <div className={Style.subscribe_box_left_input}>
-              <label>Email address</label>
+            <div className={Style.subscribe_box_left_emailfield}>
+              <label className={Style.subscribe_box_left_label}>
+                Email address
+              </label>
               <input
+                className={Style.subscribe_box_left_input}
                 type="email"
                 name="email"
                 value={email}

@@ -1,0 +1,48 @@
+.SuccessState_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin: none;
+    background-color: hsl(234, 29%, 20%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.SuccessState_box {
+    width:auto;
+    height: auto;
+    border-radius: 30px;
+    margin: auto auto;
+    padding: 2rem 3.75rem 2rem 3.75rem;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.successicon_image {
+    height: 50px; 
+    width: 50px;
+}
+
+.SuccessState_head h2 {
+    font-size: 3rem;
+    margin: 0 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.SuccessState_desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.success_btn {
+    width: 100%;
+    font-Size: 0.9rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border:none;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+}
