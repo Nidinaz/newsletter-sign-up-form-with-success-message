@@ -9,32 +9,21 @@ import illustration from "../assets/images/illustration-sign-up-desktop.svg";
 
 const Subscribe = () => {
   const [email, setEmail] = useState("");
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
-  const [emailIsValid, setEmailIsValid] = useState(false);
-
-
-  const validateEmail = (email) => {
-    const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (regEx.test(email)) {
-      setError("Success");
-    } else if (!regEx.test(email))  {
-      setError("Invalid email");
-    }else{
-      setError(" ");
-    }
-    }
-    
-    // return re.test(String(email).toLowerCase());
-  ;
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
+    const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (regEx.test(email)) {
+      setError("Success");
+    } else if (!regEx.test(email)) {
+      setError("Invalid email");
+    } 
   };
-
-  const handleChange = (e) => {
-   setEmail(e.target.value)
-  }
 
   return (
     <div className={Style.subscribe}>
@@ -74,7 +63,7 @@ const Subscribe = () => {
               <div className={Style.successicon_text}>And much more!</div>
             </div>
           </div>
-          <form onSubmit={validateEmail}>
+          <form onSubmit={handleSubmitClick}>
             <div className={Style.subscribe_box_left_input}>
               <label>Email address</label>
               <input
@@ -85,11 +74,10 @@ const Subscribe = () => {
                 onChange={handleChange}
               />
               {error}
-
             </div>
           </form>
           <div>
-            <button onClick={validateEmail} className={Style.subscribe_btn}>
+            <button onClick={handleSubmitClick} className={Style.subscribe_btn}>
               Subscribe to monthly newsletter
             </button>
           </div>
