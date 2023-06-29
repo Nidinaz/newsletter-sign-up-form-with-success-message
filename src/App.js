@@ -1,5 +1,6 @@
-import './App.css';
-import Subscribe from './components/Subscribe'
+// import Global from '../src/styles/Global.module.scss'
+import Subscribe from './components/Subscribe';
+
 
 function App() {
   return (
