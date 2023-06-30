@@ -9,7 +9,7 @@
 
 .subscribe_box {
     width:77%;
-    height: 31.5vh;
+    height: 50vh;
     margin: auto auto;
     border-radius: 30px;
     padding: 8rem 0;
@@ -69,6 +69,11 @@
     border: 2px solid #ddd;
     border-radius: 5px;
     margin-bottom: 1rem;
+
+}
+
+.subscribe_box_left_input::focus {
+    border-color: #96c477;
 }
 
 .subscribe_btn {

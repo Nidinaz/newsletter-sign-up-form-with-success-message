@@ -1,11 +1,20 @@
 // import Global from '../src/styles/Global.module.scss'
-import Subscribe from './components/Subscribe';
-import SuccessState from './components/SuccessState';
+import Subscribe from './pages/Newsletter/Subscribe';
+import SuccessState from './pages/Success/SuccessState';
+import { Route, Routes } from "react-router-dom";
+
 
 
 function App() {
   return (
-    <SuccessState></SuccessState>
+
+      <Routes>
+        <Route path="/subscribe" element={<Subscribe />} />
+        <Route path="/success" element={<SuccessState />} />
+      </Routes>
+
+
+    
   );
 }
 

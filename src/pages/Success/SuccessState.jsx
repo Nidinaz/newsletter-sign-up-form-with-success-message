@@ -1,5 +1,6 @@
 import Style from "./SuccessState.module.scss";
-import iconsuccess from "../assets/images/icon-success.svg";
+import iconsuccess from "../../assets/images/icon-success.svg";
+
 
 const SuccessState = () => {
   return (

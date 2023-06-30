@@ -3,8 +3,8 @@ import React, { useState } from "react";
 //Internal Import
 import Style from "./Subscribe.module.scss";
 // import iconlist from "../assets/images/icon-list.svg";
-import iconsuccess from "../assets/images/icon-success.svg";
-import illustration from "../assets/images/illustration-sign-up-desktop.svg";
+import iconsuccess from "../../assets/images/icon-success.svg";
+import illustration from "../../assets/images/illustration-sign-up-desktop.svg";
 // import favicon from "../assets/images/favicon-32x32.png";
 
 const Subscribe = () => {
