@@ -21,6 +21,8 @@ const Subscribe = () => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (regEx.test(email)) {
       setError("Success");
+    } else if (regEx.test(email) === "") {
+      setError("Please enter email");
     } else if (!regEx.test(email)) {
       setError("Invalid email");
     }
@@ -71,11 +73,12 @@ const Subscribe = () => {
               </label>
               <input
                 className={Style.subscribe_box_left_input}
-                type="email"
+                type="text"
                 name="email"
                 value={email}
                 placeholder="email@company.com"
                 onChange={handleChange}
+                required
               />
               {error}
             </div>
